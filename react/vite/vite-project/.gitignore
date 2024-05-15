@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+Icov-report
+/Icov-report
 
 # Editor directories and files
 .vscode/*
