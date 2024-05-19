@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { Outlet, Link, useLoaderData } from 'react-router-dom'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  let data = useLoaderData()
+  console.log("data...", data)
 
   return (
     <>
@@ -17,6 +20,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Link to={`users/1`}>Show Users</Link>
+      <Outlet />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
